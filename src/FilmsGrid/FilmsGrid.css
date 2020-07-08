@@ -1,0 +1,7 @@
+.filmLi {
+   cursor: pointer;
+
+}
+.filmLi:hover {
+    text-decoration: underline;
+}

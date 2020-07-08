@@ -45,7 +45,7 @@ class Main extends Component {
 
 
             const sortedFilms = result.data.results.sort(compare);
-            console.log('sortedFilms', sortedFilms);
+
 
 
             this.setState({films: sortedFilms})
