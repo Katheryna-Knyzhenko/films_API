@@ -36,15 +36,16 @@ class FilmsGrid extends Component {
 
             <li className='filmLi' key='film.episode_id' onClick={() => this.chooseFilm(film.episode_id)}><span>{film.title}</span>
                 { this.state.selectedFilmId === film.episode_id ? <div className='aboutFilm'>
-                    <div><span className='filmDetails'>Director: </span>{film.director}</div>
-                    <div><span className='filmDetails'>Opening crawl: </span>{film.opening_crawl}</div>
-                    <div><span className='filmDetails'>Producer: </span>{film.producer}</div>
-                    <div><span className='filmDetails'>Release date: </span> {film.release_date}</div>
-                    <div><span className='filmDetails'>Planets: </span> {film.planets}</div>
-                    <div><span className='filmDetails'>Species: </span> {film.species}</div>
-                    <div><span className='filmDetails'>Starships: </span> {film.starships}</div>
-                    <div><span className='filmDetails'>Vehicles: </span> {film.vehicles}</div>
-                </div> : null}
+                    <div className='allDetailsFilm'>
+                    <div className='aboutFilm'><span className='filmDetails'>Director:</span>{film.director}</div>
+                    <div><span className='filmDetails crawl'>Opening crawl:</span>{film.opening_crawl}</div>
+                    <div><span className='filmDetails'>Producer:</span>{film.producer}</div>
+                    <div><span className='filmDetails'>Release date:</span> {film.release_date}</div>
+                    {/*<div><span className='filmDetails'>Planets:</span> {film.planets}</div>*/}
+                    {/*<div><span className='filmDetails'>Species:</span> {film.species}</div>*/}
+                    {/*<div><span className='filmDetails'>Starships:</span> {film.starships}</div>*/}
+                    {/*<div><span className='filmDetails'>Vehicles:</span> {film.vehicles}</div>*/}
+                    </div></div> : null}
 
             </li>
         );
