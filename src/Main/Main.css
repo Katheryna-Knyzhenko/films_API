@@ -1,0 +1,27 @@
+.App {
+    background: url("https://cdn.shazoo.ru/380792_6O2CjXdvE8_3522347_starwars6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 1em 1em;
+
+}
+/*https://lumiere-a.akamaihd.net/v1/images/eu_sws-9-the-rise-of-skywalker_hero_m_3679b248.jpeg?region=0,0,750,668*/
+/*https://sm.ign.com/ign_ap/screenshot/b/bkef-birbb/bkef-birbbrbrfirst-appearance-star-wars-the-rise-of-skywalke_kycr.jpg*/
+
+.wrap {
+    background: rgba(255,255,215,0.2);
+    min-height: 100vh;
+    padding: 2em 2em;
+}
+.divButtonSearch {
+    display: flex;
+    justify-content: center;
+    margin: 3em;
+
+}
+.divButtonSearch input {
+    min-width: 40%;
+    height: 2em;
+
+}

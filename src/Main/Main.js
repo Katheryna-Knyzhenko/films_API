@@ -59,10 +59,12 @@ class Main extends Component {
 
         return (
             <div className="App">
+                <div className='wrap'>
                <div className='divButtonSearch'>
-                   <input className='input' onChange={this.sortFilmsByName}/>
+                   <input className='input' placeholder='Search' onChange={this.sortFilmsByName}/>
                </div>
                 <FilmsGrid films = {this.state.films}/>
+            </div>
             </div>
         );
     }
