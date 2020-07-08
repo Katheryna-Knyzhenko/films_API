@@ -7,8 +7,12 @@ class FilmsGrid extends Component {
     }
 
     render() {
+        const mappingFilms = this.props.films.map((film) =>
+
+            <li key='episode_id'>{film.title}</li>
+        );
         return (
-            <div>films</div>
+            <div>{mappingFilms}</div>
         )
     }
 }

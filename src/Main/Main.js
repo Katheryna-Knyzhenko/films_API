@@ -6,20 +6,35 @@ class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            films: [{}]
-        }
+            films: [], inputValue: ''
+        };
+        this.sortFilmsByName = this.sortFilmsByName.bind(this);
+    }
+
+    sortFilmsByName(event) {
+        event.preventDefault();
+        this.setState({inputValue: event.target.value});
+
+        const axios = require('axios');
+
+        axios.get(`https://swapi.dev/api/films/?search=${event.target.value}`).then((result) =>
+        {
+            function compare(prev, next) {
+                if (prev.title < next.title)
+                    return -1;
+                if (prev.title > next.title)
+                    return 1;
+                return 0;
+            }
+            const sortedSearchedFilm = result.data.results.sort(compare);
+            this.setState({films: sortedSearchedFilm})})
     }
 
     componentDidMount() {
 
-        /*function getAllFilms () {
-            return axios.get('https://swapi.dev/api/films/')
-        }*/
 
         const axios = require('axios');
         axios.get('https://swapi.dev/api/films/').then((result) => {
-            // debugger;
-
             function compare(prev, next) {
                 if (prev.title < next.title)
                     return -1;
@@ -37,22 +52,17 @@ class Main extends Component {
         })
     }
 
-//     this.state.films.sort((prev, next) => {
-//     if ( prev.film.title < next.film.title ) return -1;
-//     if ( prev.film.title < next.film.title ) return 1;
-// })
+
     render() {
 
-        const mappingFilms = this.state.films.map((film) =>
 
-            <li key='episode_id'>{film.title}</li>
-        );
 
         return (
             <div className="App">
-                привет
-                {mappingFilms}
-                <FilmsGrid/>
+               <div className='divButtonSearch'>
+                   <input className='input' onChange={this.sortFilmsByName}/>
+               </div>
+                <FilmsGrid films = {this.state.films}/>
             </div>
         );
     }
