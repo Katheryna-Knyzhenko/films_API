@@ -33,3 +33,10 @@
     border: solid 1px black;
 
 }
+
+@media (min-width: 320px) and (max-width: 414px) {
+.App {
+    background-size: cover;
+    background-position: center center;
+}
+}
