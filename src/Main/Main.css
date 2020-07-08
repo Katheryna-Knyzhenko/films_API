@@ -23,5 +23,12 @@
 .divButtonSearch input {
     min-width: 40%;
     height: 2em;
+}
+.fontInInput {
+    background-color: khaki;
+    height: 1.3em;
+    min-width: 3em;
+    padding: 0.3em;
+    border: solid 1px black;
 
 }

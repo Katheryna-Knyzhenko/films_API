@@ -51,8 +51,9 @@ class FilmsGrid extends Component {
 
 
         return (
-
-            <div>{mappingFilms}
+            <div className='wrapper'>
+                <div className='filmsList'>{mappingFilms}
+                </div>
             </div>
         )
     }

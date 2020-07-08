@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import './Main.css';
 import FilmsGrid from "../FilmsGrid/FilmsGrid";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faSearch} from "@fortawesome/free-solid-svg-icons";
+import { library } from '@fortawesome/fontawesome-svg-core'
+library.add(faSearch);
 
 class Main extends Component {
     constructor(props) {
@@ -62,7 +66,8 @@ class Main extends Component {
                 <div className='wrap'>
                <div className='divButtonSearch'>
                    <input className='input' placeholder='Search' onChange={this.sortFilmsByName}/>
-               </div>
+                   <FontAwesomeIcon  className='fontInInput' icon= {faSearch}></FontAwesomeIcon>
+                   </div>
                 <FilmsGrid films = {this.state.films}/>
             </div>
             </div>

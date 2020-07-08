@@ -1,5 +1,16 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    color: snow;
+}
+
+.filmsList {
+    font-size: 1.3em;
+    padding-top: 2em;
+}
 .filmLi {
    cursor: pointer;
+    margin-bottom: 1.4em;
 
 }
 span:hover {
