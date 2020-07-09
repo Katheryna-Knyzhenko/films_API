@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './Main.css';
-import FilmsGrid from "../FilmsGrid/FilmsGrid";
+import FilmsGrid from "../films_grid/FilmsGrid";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSearch} from "@fortawesome/free-solid-svg-icons";
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -47,10 +47,7 @@ class Main extends Component {
                 return 0;
             }
 
-
             const sortedFilms = result.data.results.sort(compare);
-
-
 
             this.setState({films: sortedFilms})
         })
@@ -66,7 +63,7 @@ class Main extends Component {
                 <div className='wrap'>
                <div className='divButtonSearch'>
                    <input className='input' placeholder='Search' onChange={this.sortFilmsByName}/>
-                   <FontAwesomeIcon  className='fontInInput' icon= {faSearch}></FontAwesomeIcon>
+                   <FontAwesomeIcon  className='fontInInput' icon= {faSearch}/>
                    </div>
                 <FilmsGrid films = {this.state.films}/>
             </div>
