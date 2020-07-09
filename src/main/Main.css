@@ -2,9 +2,10 @@
     background: url("https://cdn.shazoo.ru/380792_6O2CjXdvE8_3522347_starwars6.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 99vh;
     margin: 1em 1em;
     max-width: 100vw;
+    background-attachment: fixed;
 
 }
 
